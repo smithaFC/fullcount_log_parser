@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+		<title>FullCount Log Parser</title>
+	</head>
+	<body>
+		<h1 style="text-align: center">FullCount log parser</h1>
+		<div
+			style="
+				display: flex;
+				flex-direction: column;
+				justify-content: space-evenly;
+				align-items: center;
+				width: 100%;
+				height: 50vh;
+			"
+		>
+			<div>
+				<div class="container-column" style="justify-content: space-between; margin: 0 auto">
+					<div class="container-column" style="border: 4px; border-width: 4px; border-radius: 4px">
+						<div>
+							<label for="logFileLoc">Log file location:</label>
+							<span id="logFileLoc"></span>
+						</div>
+						<div>
+							<button id="logFileUpdaterBtn">find</button>
+						</div>
+					</div>
+					<div class="container-column">
+						<div>
+							<label for="parsedFileLoc">Parsed file location:</label>
+							<span id="parsedFileLoc"></span>
+						</div>
+						<div>
+							<button id="parsedFileUpdaterBtn">find</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div style="display: flex; flex-direction: column; justify-content: center; align-items: center">
+				<div>
+					<label for="status">Status:</label>
+					<span id="status"></span>
+				</div>
+				<br />
+				<div>
+					<span>Please enter all the key words diliminated by commas</span>
+					<br />
+
+					<span>example: test, communityId=2323,user-smitha</span>
+					<br />
+					<span>Popular search criteria: communityId-x </span>
+				</div>
+				<br />
+				<textarea id="textArea" style="width: 100%"> </textarea>
+				<br />
+				<span id="loadingSpan" style="display: none">loading...</span>
+				<button onClick="parse" id="submit">Parse file</button>
+			</div>
+		</div>
+
+		<p style="position: fixed; bottom: 0" id="info"></p>
+	</body>
+	<script src="../src/renderFunctions/renderer.js"></script>
+	<link rel="stylesheet" href="./style.css" />
+</html>

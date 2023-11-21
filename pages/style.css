@@ -1,0 +1,23 @@
+.container-column {
+	display: flex;
+	gap: 8px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.container-row {
+	display: flex;
+	gap: 8px;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-item {
+	flex-grow: 1;
+}
+
+.justify-start {
+	justify-content: flex-start;
+}

@@ -1,0 +1,26 @@
+{
+  "name": "fullcount_logs",
+  "version": "0.0.1",
+  "description": "Simple UI application designed to help parse log files",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "author": "smitha",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^27.1.0",
+    "electron-builder": "^24.6.4"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0",
+    "module-alias": "^2.2.3",
+    "node-localstorage": "^3.0.5"
+  },
+  "build": {
+    "appId": "fullcount.logparser"
+  }
+}
